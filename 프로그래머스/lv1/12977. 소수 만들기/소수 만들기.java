@@ -19,15 +19,11 @@ class Solution {
 
     public boolean isPrime(int n) {
         int count = 0;
-        for (int j = 2; j <= Math.sqrt(n); j++) {
+        for (int j = 2; j <= (int)Math.sqrt(n); j++) {
             if (n % j == 0) {
                 count++;
             }
         }
-        if (count < 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return count == 0;
     }
 }
