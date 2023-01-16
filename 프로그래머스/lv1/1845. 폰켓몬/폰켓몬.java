@@ -8,6 +8,6 @@ class Solution {
         for (int num : nums) {
             set.add(num);
         }
-        return set.size() < answer ? set.size() : answer;
+        return Math.min(set.size(), answer);
     }
 }
