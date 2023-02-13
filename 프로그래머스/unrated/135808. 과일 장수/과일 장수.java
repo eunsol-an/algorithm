@@ -1,14 +1,13 @@
 import java.util.Arrays;
 class Solution {
-    // 배열 오름차순 정렬
-    // score 배열의 길이에서 i 를 뺀 값이 m 의 배수이면 그 인덱스 요소 => 최솟값 p
-    // answer 에 p * m 더하기
-    
     public int solution(int k, int m, int[] score) {
+        // score 배열의 길이 부터 m 까지 m 만큼 반복
+        // i 에서 m 을 뺀 만큼의 index 로 접근
+        // answer 에 p * m 더하기
         int answer = 0;
         Arrays.sort(score); // {1, 1, 1, 2, 2, 3, 3}
-        for (int i = score.length - 1; i >= 0; i--) {
-            if ((score.length - i) % m == 0) answer += score[i] * m;
+        for (int i = score.length; i >= m; i-= m) {
+            answer += score[i - m] * m;
         }
         return answer;
     }
