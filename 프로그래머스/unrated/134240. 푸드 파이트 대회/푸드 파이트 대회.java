@@ -11,9 +11,7 @@ class Solution {
             int count = food[i] / 2;
             sb.append(Integer.toString(i).repeat(count));
         }
-        answer += sb;
-        answer += "0";
-        answer += sb.reverse().toString();
-        return answer;
+        answer = sb + "0";
+        return answer + sb.reverse();
     }
 }
