@@ -1,12 +1,12 @@
 class Solution {
     public int solution(String[] spell, String[] dic) {
         int answer = 2;
-        for (int i = 0; i < dic.length; i++) { // def
+        for (String s : dic) {
             int total = 0;
-            for (int j = 0; j < spell.length; j++) { // z d
+            for (String value : spell) {
                 int cnt = 0;
-                for (int k = 0; k < dic[i].length(); k++) { // d e f
-                    if (spell[j].charAt(0) == dic[i].charAt(k)) {
+                for (int k = 0; k < s.length(); k++) {
+                    if (value.charAt(0) == s.charAt(k)) {
                         cnt++;
                     }
                 }
