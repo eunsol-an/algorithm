@@ -10,13 +10,10 @@ class Solution {
         for (String s : goalList) {
             if (!cards1List.isEmpty() && cards1List.get(0).equals(s)) {
                 cards1List.remove(0);
-            } else {
-                if (!cards2List.isEmpty() && cards2List.get(0).equals(s)) {
+            } else if (!cards2List.isEmpty() && cards2List.get(0).equals(s)) {
                     cards2List.remove(0);
-                } else {
+            } else {
                     return "No";
-                }
-
             }
         }
         return "Yes";
