@@ -1,13 +1,13 @@
 class Solution {
     public int solution(int n, int m, int[] section) {
-        int answer = 0;
         int roller = section[0];
-        for (int point : section) {
-            if (point >= roller) {
-                answer += 1;
-                roller = point + m;
+        int cnt = 1;
+        for(int i = 1; i < section.length; i++) {
+            if(roller + m - 1 < section[i]) {
+                cnt++;
+                roller = section[i];
             }
         }
-        return answer;
+        return cnt;
     }
 }
