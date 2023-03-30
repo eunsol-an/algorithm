@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.List;
 class Solution {
     public int solution(int k, int[] tangerine) {
+        if (k == 1) return 1;
         int answer = 0;
         int cnt = 0;
         List<Integer> countList = new ArrayList<>();
