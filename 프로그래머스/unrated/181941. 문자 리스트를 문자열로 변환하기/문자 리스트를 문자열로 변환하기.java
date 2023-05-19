@@ -1,8 +1,8 @@
 class Solution {
     public String solution(String[] arr) {
         StringBuilder answer = new StringBuilder();
-        for(int i = 0; i < arr.length; i++) {
-            answer.append(arr[i]);
+        for(String s : arr) {
+            answer.append(s);
         }
         return answer.toString();
     }
