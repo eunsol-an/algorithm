@@ -1,7 +1,6 @@
 import java.util.*;
 class Solution {
     public List<Integer> solution(int n) {
-        int[] answer = {};
         List<Integer> collatz = new ArrayList<>();
         collatz.add(n);
         while (n > 1) {
