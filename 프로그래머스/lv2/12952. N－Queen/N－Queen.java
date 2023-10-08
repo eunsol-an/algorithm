@@ -22,14 +22,14 @@ class Solution {
 
         for (int i = 0; i < n; i++) {
             arr[row] = i;
-            if(isPossible(row)) {
+            if(possible(row)) {
                 bt(n ,row + 1);
             }
         }
     }
 
     
-    static boolean isPossible(int row) {
+    static boolean possible(int row) {
         for (int i = 0; i < row; i++) {
             
             if(arr[i] == arr[row]) {
