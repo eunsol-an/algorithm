@@ -6,20 +6,20 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		
-		int sum, count, start_index, end_index;
-		sum = count = start_index = end_index = 1;
+		int sum, count, start, end;
+		sum = count = start = end = 1;
 		
-		while (end_index != N) {
-			if (sum > N) {
-				sum -= start_index;
-				start_index++;
-			}else if (sum < N) {
-				end_index++;
-				sum += end_index;
-			}else if (sum == N) {
-				end_index++;
-				sum += end_index;
+		while (end != N) {
+			if (sum == N) {
+				end++;
+				sum += end;
 				count++;
+			}else if (sum > N) {
+				sum -= start;
+				start++;
+			}else {
+				end++;
+				sum += end;
 			}
 		}
 		
